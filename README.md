@@ -11,6 +11,7 @@ Table of content
 - [Run The App](#run-the-app)
   - [Start the server](#start-the-server)
   - [In browser](#in-browser)
+- [Testing](#testing)
 - [Resorces](#resorces)
 
 ## Installation instructions
@@ -47,6 +48,18 @@ Deactivate virtual environment:
 (venv) pip install -r requirements.txt        # app dependencies
 (venv) pip install -r requirements.dev.txt    # dev and testing dependencies
 ```
+
+### Install the project
+
+To work properly project needs to be installed into the virtual environment. This step requires pyproject.toml file to be in the project's root.
+
+```
+(venv) pip install -e .
+```
+
+This tells pip to find pyproject.toml in the current directory and install the project in editable or development mode. Editable mode means that as you make changes to your local code, you’ll only need to re-install if you change the metadata about the project, such as its dependencies.
+
+You can observe that the project is now installed with 'pip list'.
 
 ## Project structure
 
@@ -88,7 +101,7 @@ flask-tutorial/
 ├── hello.py
 ├── LICENCE
 ├── MANIFEST.in
-├── pyproject.toml
+<!-- ├── pyproject.toml -->
 ├── README.md
 ├── requirements.dev.txt
 └── requirements.txt
@@ -120,6 +133,24 @@ DB file (flaskr.sqlite by default) should appear in the instance folder.
 - http://127.0.0.1:5000/hello: test page in the blog app
 - http://127.0.0.1:5000/auth/register: register a user
 
+
+## Testing
+
+To test the project, collect test stats and measure the  coverage pytest and coverage libraries are used.
+
+```
+(venv) pytest                                     # run unit tests with default configuration
+(venv) pytest -v                                  # run tests in the verbose mode
+(venv) coverage run -m pytest                     # measure the code coverage of the tests
+(venv) coverage report                            # generate coverage report in the terminal
+(venv) coverage html                              # generate html coverage report
+# linux
+(venv) coverage run -m pytest && coverage report  # run both commands together
+(venv) coverage run -m pytest && coverage html    # run both commands together
+# windows
+(venv) coverage run -m pytest; coverage report    # run both commands together
+(venv) coverage run -m pytest; coverage html      # run both commands together
+```
 
 ## Resorces
 
