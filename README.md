@@ -7,11 +7,14 @@ Table of content
   - [Getting the project code](#getting-the-project-code)
   - [Virtual environment](#virtual-environment)
   - [Project dependencies](#project-dependencies)
+  - [Install the project](#install-the-project)
 - [Project structure](#project-structure)
 - [Run The App](#run-the-app)
   - [Start the server](#start-the-server)
   - [In browser](#in-browser)
 - [Testing](#testing)
+  - [Code quality](#code-quality)
+  - [Unit tests](#unit-tests)
 - [Resorces](#resorces)
 
 ## Installation instructions
@@ -21,6 +24,11 @@ Table of content
 ```sh
 $ git clone https://github.com/yurkov74/flask-tutorial.git
 ```
+
+### Python versions
+
+List of comfirmed python versions the project is working on:
+- 3.10.6
 
 ### Virtual environment
 
@@ -135,6 +143,16 @@ DB file (flaskr.sqlite by default) should appear in the instance folder.
 
 
 ## Testing
+
+### Code quality
+
+For testing the code quality the projict is using flake8-pyproject library.
+
+```
+flake8 -v --benchmark
+```
+
+### Unit tests
 
 To test the project, collect test stats and measure the  coverage pytest and coverage libraries are used.
 

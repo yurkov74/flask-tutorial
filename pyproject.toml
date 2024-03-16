@@ -16,3 +16,15 @@ testpaths = ["tests"]
 [tool.coverage.run]
 branch = true
 source = ["flaskr"]
+
+[tool.flake8]
+exclude = [
+    "__pycache__",
+    ".git",
+    ".github",
+    ".pytest_cache",
+    "htmlcov",
+    "instance",
+    "venv",
+    ".coverage"
+]
