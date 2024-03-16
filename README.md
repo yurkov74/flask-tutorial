@@ -11,6 +11,7 @@ Table of content
 - [Run The App](#run-the-app)
   - [Start the server](#start-the-server)
   - [In browser](#in-browser)
+- [Resorces](#resorces)
 
 ## Installation instructions
 
@@ -51,6 +52,8 @@ Deactivate virtual environment:
 
 Main folders
 - flaskr/, a Python package containing your application code and files.
+- flaskr/templates, templates are files that contain static data as well as placeholders for dynamic data. A template is rendered with specific data to produce a final document. Flask uses the Jinja template library to render templates.
+- flaskr/static, static files for our web app.
 - tests/, a directory containing test modules.
 - venv/, a Python virtual environment where Flask and other dependencies are installed.
 
@@ -115,3 +118,11 @@ DB file (flaskr.sqlite by default) should appear in the instance folder.
 
 - http://127.0.0.1:5000: app home page
 - http://127.0.0.1:5000/hello: test page in the blog app
+- http://127.0.0.1:5000/auth/register: register a user
+
+
+## Resorces
+
+- [Flask official tutorial](https://flask.palletsprojects.com/en/3.0.x/tutorial/)
+- [Flask CLI](https://flask.palletsprojects.com/en/3.0.x/cli/)
+- [Jinja templates](https://jinja.palletsprojects.com/templates/)
